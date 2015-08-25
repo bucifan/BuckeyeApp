@@ -113,7 +113,7 @@ function getPlayerData(po){
 		//alert("load done");
 		
 		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
-		//$("#player-photo").appendTo("#playerDetail");
+		$("#player-photo").appendTo("#playerDetail");
 		$(".bio-body img").remove();
 		$(".bio-body font").removeAttr('color');
 		$(".bio-body font").removeAttr('face');
