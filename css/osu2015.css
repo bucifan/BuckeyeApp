@@ -1,0 +1,48 @@
+body, html {
+	margin:0;
+	padding:0;
+	background-color:#ffffff;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.wrapper {
+	position:absolute;
+	top:120px;
+	left:50%;
+}
+.wrapper-text {
+	position:absolute;
+	top:180px;
+	width: 100%;
+	text-align: center
+}
+.panel-heading{
+	background: red;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold; 
+	font-family:  Tahoma, Geneva, sans-serif;
+	border: 1px gray solid;
+}
+.playerlookup{
+	/*width: 100%;*/
+	text-align: center;
+	margin: 15px 20px;
+	border: 1px #67707e solid;
+	padding: 20px;
+	
+}
+.playerlookup label{
+	font-weight: bold;
+	color: gray;
+}
+.playerlookup div{
+	margin: 15px; 
+}
+#hidplayerData{
+	 display: none;
+}
+.playerDtls{
+	width: 50%;
+	color: maroon;
+}
