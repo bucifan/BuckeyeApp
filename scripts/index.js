@@ -108,12 +108,12 @@ function addLookup(){
 function getPlayerData(po){
 	//$("#playerLU").val("");
 	var lurl=po.url.substring(po.url.lastIndexOf("/"));
-	
+	$("#playerDetail").remove();
 	$("#hidplayerData").load("players"+lurl+".html #Content", function(){
 		//alert("load done");
 		
 		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
-		$("#player-photo").appendTo("#playerDetail");
+		$("#playerDetail").append("<img src='players"+lurl+".jpeg />");
 		$(".bio-body img").remove();
 		$(".bio-body font").removeAttr('color');
 		$(".bio-body font").removeAttr('face');
