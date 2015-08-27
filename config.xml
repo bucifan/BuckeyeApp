@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:gap="http://phonegap.com/ns/1.0" version="1.0.0.2" xmlns="http://www.w3.org/ns/widgets">
+<widget xmlns:gap="http://phonegap.com/ns/1.0" version="1.0.0.3" xmlns="http://www.w3.org/ns/widgets">
   <name>Bucifan - Go Bucks</name>
   <description>A mobile app to provide access to Ohio State schedule and roster</description>
   <author href="http://www.bucifan.com" email="roberoach@hotmail.com">Rob Roach - Bucifan.com</author>

@@ -123,6 +123,6 @@ function getPlayerData(po){
 		});
 		dtlsHTML+="</div>";
 		$("#playerDetail").append(dtlsHTML);
-		
+		$("#playerLU").blur();
 	});
 }
