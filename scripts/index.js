@@ -18,7 +18,7 @@ var mappedPlayers = players.map(function(p){
 	}  
 	return p;
 });
-var lastPlayer = window.localStorage.getItem('lastplayer')
+var lastPlayer = localStorage["lastplayer"];
 
 
 (function () {
@@ -126,7 +126,7 @@ function getPlayerData(po){
 		dtlsHTML+="</div>";
 		$("#playerDetail").append(dtlsHTML);
 		$("#playerLU").blur();
-    window.localStorage.setItem('lastplayer',po.name );
+    localStorage['lastplayer'] =po.name;
 	});
 }
 
