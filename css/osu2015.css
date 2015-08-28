@@ -1,10 +1,4 @@
-.panel-body{
-   background-image: url("images/buckeyestripe2.png");
-   background-repeat: repeat-y;
-   background-position: center;
-   height: 100%;
-   text-align: center;
-}
+
 .playerDtls{
    background-color: #e5e7ea;
    border: 1px gray sold;

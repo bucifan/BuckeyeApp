@@ -20,6 +20,7 @@ var mappedPlayers = players.map(function(p){
 });
 //var lastPlayer = localStorage["lastplayer"];
 var lastPlayer = "";
+var HnW;
 
 (function () {
     "use strict";
@@ -35,6 +36,7 @@ var lastPlayer = "";
         document.addEventListener( 'resume', onResume.bind( this ), false );
         //document.addEventListener( 'offline', onOffline.bind(this), false);
         //document.addEventListener( 'online', onOnline.bind(this), false);
+        HnW = getWindowSizes();
         logon();
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
@@ -132,5 +134,23 @@ function getPlayerData(po){
 function gotoschedule(){
   $("#playerDetail").remove();
   $(".playerlookup").append("<div id='playerDetail'> <label>"+lastPlayer+"</label><br/></div>");
-  $(".playerDetail").append(" <b>" + $(window).height + "</b><br/>");
+  $(".playerDetail").append(" <b>" + HnW[0] + " - " + HnW[1] + "</b><br/>");
+  $(".playerDetail").append(" <b>" + window.height + "</b><br/>");
+}
+
+function getWindowSizes() {
+  var windowHeight = 0, windowWidth = 0;
+  if (typeof (window.innerWidth) == 'number') {
+      windowHeight = window.innerHeight;
+      windowWidth = window.innerWidth;
+      
+  } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+      windowHeight = document.documentElement.clientHeight;
+      windowWidth = document.documentElement.clientWidth;
+      
+  } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+     windowHeight = document.body.clientHeight;
+     windowWidth = document.body.clientWidth;
+  }
+  return [windowWidth, windowHeight];
 }
