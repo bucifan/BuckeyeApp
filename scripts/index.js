@@ -18,8 +18,8 @@ var mappedPlayers = players.map(function(p){
 	}  
 	return p;
 });
+var lastPlayer = window.localStorage.getItem('lastplayer')
 
-window.localStorage.setItem('logonattempt', "N");
 
 (function () {
     "use strict";
@@ -115,7 +115,7 @@ function getPlayerData(po){
 		//alert("load done");
 		
 		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
-		$("#playerDetail").append("<img src='../players"+lurl+".jpeg' />");
+		$("#playerDetail").append("<label>../players"+lurl+".jpeg </label>' />");
 		$(".bio-body img").remove();
 		$(".bio-body font").removeAttr('color');
 		$(".bio-body font").removeAttr('face');
@@ -126,5 +126,11 @@ function getPlayerData(po){
 		dtlsHTML+="</div>";
 		$("#playerDetail").append(dtlsHTML);
 		$("#playerLU").blur();
+    window.localStorage.setItem('lastplayer',po.name );
 	});
+}
+
+function gotoschedule(){
+  $("#playerDetail").remove();
+  $(".playerlookup").append("<div id='playerDetail'> <label>"+lastPlayer+"</label><br/></div>");
 }
