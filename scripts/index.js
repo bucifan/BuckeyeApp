@@ -95,6 +95,7 @@ function checkConnection() {
 function addLookup(){
   $(".panel-body").html("<div class='playerlookup'> " + mappedPlayers.length+ " players loaded </div>");
   $(".playerlookup").append("<div> <label>Player Lookup:</label><br/><input id='playerLU'/></div>");
+  $(".playerlookup").append("<div id='playerDetail'><img src='images/blank.gif' height='500px/></div>");
   $("#playerLU").autocomplete({
 	  minLength: 0,
 	  source: mappedPlayers,
@@ -115,7 +116,7 @@ function getPlayerData(po){
 	$("#playerDetail").remove();
 	$("#hidplayerData").load("players"+lurl+".html #Content", function(){
 		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
-		$("#playerDetail").append("<img src='players"+lurl+".jpg' />");
+		$("#playerDetail").append("<img src='players"+lurl+".jpg' /><hr/>");
 		$(".bio-body img").remove();
 		$(".bio-body font").removeAttr('color');
 		$(".bio-body font").removeAttr('face');
