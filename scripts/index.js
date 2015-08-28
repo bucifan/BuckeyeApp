@@ -18,8 +18,8 @@ var mappedPlayers = players.map(function(p){
 	}  
 	return p;
 });
-var lastPlayer = localStorage["lastplayer"];
-
+//var lastPlayer = localStorage["lastplayer"];
+var lastPlayer = "";
 
 (function () {
     "use strict";
@@ -112,8 +112,6 @@ function getPlayerData(po){
 	var lurl=po.url.substring(po.url.lastIndexOf("/"));
 	$("#playerDetail").remove();
 	$("#hidplayerData").load("players"+lurl+".html #Content", function(){
-		//alert("load done");
-		
 		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
 		$("#playerDetail").append("<label>../players"+lurl+".jpeg </label>' />");
 		$(".bio-body img").remove();
@@ -126,7 +124,8 @@ function getPlayerData(po){
 		dtlsHTML+="</div>";
 		$("#playerDetail").append(dtlsHTML);
 		$("#playerLU").blur();
-    localStorage['lastplayer'] =po.name;
+    //localStorage['lastplayer'] =po.name;
+    lastPlayer = po.name;
 	});
 }
 
