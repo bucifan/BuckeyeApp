@@ -36,7 +36,7 @@ var HnW;
         document.addEventListener( 'resume', onResume.bind( this ), false );
         //document.addEventListener( 'offline', onOffline.bind(this), false);
         //document.addEventListener( 'online', onOnline.bind(this), false);
-        HnW = getWindowSizes();
+        
         logon();
 
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
@@ -88,6 +88,7 @@ function checkConnection() {
      $(".panel-body").html("<br/><br><b style='color:red'>" +  states[networkState] + "</b>");
    } else{
      $("#currop").html("loading player data ...");
+     HnW = getWindowSizes();
      setTimeout(addLookup,1500);
    }  
 }   
@@ -95,7 +96,7 @@ function checkConnection() {
 function addLookup(){
   $(".panel-body").html("<div class='playerlookup'> " + mappedPlayers.length+ " players loaded </div>");
   $(".playerlookup").append("<div> <label>Player Lookup:</label><br/><input id='playerLU'/></div>");
-  $(".playerlookup").append("<div id='playerDetail'><img src='images/blank.gif' height='500px/></div>");
+  $(".playerlookup").append("<div id='playerDetail'><img src='images/blank.png' height='500px'/></div>");
   $("#playerLU").autocomplete({
 	  minLength: 0,
 	  source: mappedPlayers,
@@ -135,8 +136,8 @@ function getPlayerData(po){
 function gotoschedule(){
   $("#playerDetail").remove();
   $(".playerlookup").append("<div id='playerDetail'> <label>"+lastPlayer+"</label><br/></div>");
-  $(".playerDetail").append(" <b>" + HnW[0] + " - " + HnW[1] + "</b><br/>");
-  $(".playerDetail").append(" <b>" + window.height + "</b><br/>");
+  getWindowSizes();
+
 }
 
 function getWindowSizes() {
@@ -153,5 +154,6 @@ function getWindowSizes() {
      windowHeight = document.body.clientHeight;
      windowWidth = document.body.clientWidth;
   }
-  return [windowWidth, windowHeight];
+  
+   $(".playerDetail").append(" <b> height: " + windowHeight + " - width: " +windowWidth + "</b><br/>");
 }
