@@ -80,6 +80,8 @@ function checkConnection() {
    states[Connection.NONE]     = 'No network connection';
 
    //alert('Connection type: ' + states[networkState]);
+   $(".panel-body").css('height',$(window).height);
+   
    if( states[networkState] == 'No network connection'){
      $(".panel-body").html("<br/><br><b style='color:red'>" +  states[networkState] + "</b>");
    } else{
@@ -113,7 +115,7 @@ function getPlayerData(po){
 		//alert("load done");
 		
 		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
-		$("#playerDetail").append("<img src='players"+lurl+".jpeg' />");
+		$("#playerDetail").append("<img src='../players"+lurl+".jpeg' />");
 		$(".bio-body img").remove();
 		$(".bio-body font").removeAttr('color');
 		$(".bio-body font").removeAttr('face');
