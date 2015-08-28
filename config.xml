@@ -8,5 +8,5 @@
   <icon src="icon2.png" />
   <gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
   <feature name="http://api.phonegap.com/1.0/network"/> 
-  <preference name="orientation" value="portrait" / >
+  <preference name="orientation" value="portrait" />
 </widget>
