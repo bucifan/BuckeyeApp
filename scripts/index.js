@@ -132,4 +132,5 @@ function getPlayerData(po){
 function gotoschedule(){
   $("#playerDetail").remove();
   $(".playerlookup").append("<div id='playerDetail'> <label>"+lastPlayer+"</label><br/></div>");
+  $(".playerDetail").append(" <b>" + $(window).height + "</b><br/>");
 }
