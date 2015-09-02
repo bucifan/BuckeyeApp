@@ -94,9 +94,9 @@ function checkConnection() {
 }   
 
 function addLookup(){
-  $(".panel-body").html("<div class='playerlookup'> " + mappedPlayers.length+ " players loaded </div>");
-  $(".playerlookup").append("<div> <label>Player Lookup:</label><br/><input id='playerLU'/></div>");
-  $(".playerlookup").append("<div id='playerDetail'><img src='images/blank.png' height='500px'/></div>");
+  $(".panel-body").html("<div class='playerlookup'><span id='loadedcnt'> " + mappedPlayers.length+ " players loaded </span></div>");
+  $(".playerlookup").append("<div class='newlookup'> <label>Player Lookup: </label> <input id='playerLU'/></div>");
+  $(".playerlookup").append("<div id='playerDetail'><img src='images/blank.png' height='400px'/></div>");
   $("#playerLU").autocomplete({
 	  minLength: 0,
 	  source: mappedPlayers,
@@ -115,17 +115,23 @@ function getPlayerData(po){
 	//$("#playerLU").val("");
 	var lurl=po.url.substring(po.url.lastIndexOf("/"));
 	$("#playerDetail").remove();
-	$("#hidplayerData").load("players"+lurl+".html #Content", function(){
-		$(".playerlookup").append("<div id='playerDetail'> <label>"+po.name+"</label><br/></div>");
-		$("#playerDetail").append("<img src='players"+lurl+".jpg' /><hr/>");
+	$("#hidplayerData").load("players" + lurl + ".html #Content", function () {
+	   
+	    $(".newlookup").attr('class', 'pdlookup');
+	    $("#loadedcnt").hide();
+	    $(".playerlookup").append("<div id='playerDetail'> <label>" + po.name + "</label><br/></div>");
+	    $("#playerDetail").append("<table class='numNpic'><tr><td class='pnumber'><span class='sharpsign'>#</span>"+po.num+"</td><td><div class='hbrk'>&nbsp; </div></td><td class='ppic'><img src='players"+lurl+".jpg' /></td></tr></table><hr style='width:75%'/>");
 		$(".bio-body img").remove();
 		$(".bio-body font").removeAttr('color');
 		$(".bio-body font").removeAttr('face');
+		$("font").removeAttr('size');
 		var dtlsHTML = "<div class='playerDtls'>";
 		$(".bio-body table table td").each(function(){
 			dtlsHTML+=$(this).html();
 		});
-		dtlsHTML+="</div>";
+		dtlsHTML += "</div>";
+		$(".bio-table").remove();
+		dtlsHTML += "<hr/>" + $("#Content").html();
 		$("#playerDetail").append(dtlsHTML);
 		$("#playerLU").blur();
     //localStorage['lastplayer'] =po.name;
@@ -135,7 +141,10 @@ function getPlayerData(po){
 
 function gotoschedule(){
   $("#playerDetail").remove();
-  $(".playerlookup").append("<div id='playerDetail'> <label>"+lastPlayer+"</label><br/></div>");
+  $(".playerlookup").append("<div id='playerDetail'> <label>2015 Schedule</label><br/></div>");
+  
+  
+  //$(".playerlookup").append("<div id='playerDetail'><img src='images/blank.png' height='400px'/></div>");
   getWindowSizes();
 
 }

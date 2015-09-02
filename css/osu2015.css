@@ -1,12 +1,50 @@
 
 .playerDtls{
    background-color: #e5e7ea;
-   border: 1px gray sold;
+   border: 1px gray solid;
    margin: auto;
-   max-width: 70%;
+   max-width: 80%;
+   font-size:14pt;
 }
 .hdricons{
    float: right;
    padding-right: 10px;
             
+}
+.newlookup label{
+    width:100%;
+    margin-bottom:20px;
+}
+.newlookup label{
+    width:100%;
+    margin-bottom:20px;
+}
+#playerDetail label{
+    color:maroon;
+    font-size:18pt;
+
+}
+.numNpic{
+    width:100%
+}
+.sharpsign{
+   font-size:25pt;
+   vertical-align:top;
+   margin-top:20px;
+}
+.pnumber{
+    font-size:60pt;
+    font-weight:bold;
+    text-align:right;
+    padding-right:15px;
+    width:49%;
+}
+.ppic{
+    text-align:left;
+    padding-left:15px;
+    width:49%;
+}
+.hbrk{
+    border-left:1px solid white;  
+    height:170px;
 }
