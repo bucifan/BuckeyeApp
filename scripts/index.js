@@ -140,7 +140,7 @@ function getPlayerData(po){
 	});
 }
 function gotoschedule() {
-    window.location.assign("2015schedule.html");
+    window.location.assign("schedules/2015Schedule.html");
 }
 function gotoscheduleOld(){
   $("#playerDetail").remove();
