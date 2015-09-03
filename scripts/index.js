@@ -139,15 +139,17 @@ function getPlayerData(po){
     lastPlayer = po.name;
 	});
 }
-
-function gotoschedule(){
+function gotoschedule() {
+    window.location.assign("2015schedule.html");
+}
+function gotoscheduleOld(){
   $("#playerDetail").remove();
   $(".playerlookup").append("<div id='playerDetail'> <label>2015 Schedule</label><br/></div>");
   $("#playerDetail").append("<div id='scheduleList' >loading schedule...<br/><img src='images/loading.gif' alt='loading'/></div>");
   var schHTML = "";
   $.getJSON("http://bucifanSchedule.azure-mobile.net/api/footballseason?year=2015", function (data) {
       for (i = 0; i < data.length; i++) {
-          schHTML += "<tr data-localid='" + i + "' data-serverid='" + data[i].id + "' ><td>" + data[i].GameDateTime + "</td><td><img src='http://www.bucifan.com/img/helmets/illinois1.gif' /></td><td>" + data[i].Opponet + "</td><td>" + data[i].Location + "</td></tr>";
+          schHTML += "<tr data-localid='" + i + "' data-serverid='" + data[i].id + "' ><td>" + data[i].GameDateTime + "</td><td>" + data[i].Opponet + "</td><td>" + data[i].Location + "</td></tr>";
           //schHTML += "<tr class='editrow'><td colspan='99'><div class='editrowdiv' data-editdivid='" + i + "' data-servereditid='" + data[i].id + "' ><table><tr><td class='saveedits'  data-localeditid='" + i + "'> save </td><td> Helmet Image: <input type='text' class='editinput'  data-localeditid='" + i + "'/></td></tr></table></div></td></tr>";
       }
       $("#scheduleList").html("<table>" + schHTML + "</table>");

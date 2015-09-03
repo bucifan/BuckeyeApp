@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Go Bucks</title>
+    <!-- OSHIIPMOBILE references -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+    <link href="css/osu2015.css" rel="stylesheet" />
+    <style>
+        .panel-primary{
+             background-image: url("images/buckeyestripe2.png");
+             background-repeat: repeat-y;
+             background-position: center;
+             height: 100%;
+             text-align: center;
+        }
+        .panel-body{
+             background-image: url("images/osu2014nc200light.png");
+             background-repeat:no-repeat; 
+             background-position: center;
+             height: 100%;
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="panel panel-primary" style='margin:10px 10px 10px 10px;'>
+             <div class="panel-heading" style='text-align:center;background:#991119'>GO BUCKEYES!
+                <span class='hdricons'>
+                     <img src="images/person.png" alt="Schedule" onclick="gotolookup();"/>
+                 </span>             
+             </div>
+             <div class="panel-body" style="text-align:center;padding:5px;height:100%">
+                 <b class="schhdr">2015 Schedule</b>
+                 <table class="schtbl">
+                   <tr data-localid="1" data-serverid="1E735E65-E3F7-43B2-9D82-BD661378F1EF"><td>9/7/2014</td><td>Virginia Tech</td><td>Away</td></tr>
+                   <tr data-localid="2" data-serverid="F280911A-51F9-4AAA-B737-7F98895BC6C7"><td>9/12/2015</td><td>Hawaii</td><td>Home</td></tr>
+                   <tr data-localid="3" data-serverid="1AF3E29D-F922-474C-B901-1A2D6E518A59"><td>9/19/2015</td><td>Northern Illinios</td><td>Home</td></tr>
+                   <tr data-localid="4" data-serverid="9B4ADB00-352E-414B-A44A-4A7E78E73911"><td>9/26/2015</td><td>Western Michigan</td><td>Home</td></tr>
+                   <tr data-localid="5" data-serverid="8E5B09CB-5053-4221-8881-82DA4B2133E1"><td>10/3/2015</td><td>Indiana</td><td>Away</td></tr>
+                   <tr data-localid="6" data-serverid="885DFEF2-6FE1-45FC-803E-B8B037BD71F0"><td>10/10/2015</td><td>Maryland</td><td>Home</td></tr>
+                   <tr data-localid="7" data-serverid="034431D4-2B17-484B-B192-512506A28CFA"><td>10/17/2015</td><td>Penn State</td><td>Home</td></tr>
+                   <tr data-localid="8" data-serverid="0B57C31D-602A-4B65-9C1F-C8D4B2C4F945"><td>10/24/2015</td><td>Rutgers</td><td>Away</td></tr>
+                   <tr data-localid="9" data-serverid="1F3AF663-4369-42A4-9760-10534C3406A5"><td>11/7/2015</td><td>Minnesota</td><td>Home</td></tr>
+                   <tr data-localid="10" data-serverid="AA9CA724-931D-4881-A0A6-57A42DF59E4D"><td>11/14/2015</td><td>Illinios</td><td>Away</td></tr>
+                   <tr data-localid="11" data-serverid="9494710C-763A-41A9-9F14-BD89B0E3A2E2"><td>11/21/2015</td><td>Michigan State</td><td>Home</td></tr>
+                   <tr data-localid="12" data-serverid="8F81E13E-6D6F-4A32-83AA-B8E27BBB2A8C"><td>11/28/2015</td><td>TTUN</td><td>Away</td></tr>
+                   <tr data-localid="13" data-serverid="0D5ECCC8-0B70-451A-B554-86A5EE2D8DE2"><td>12/5/2015</td><td>B10 Championship</td><td>Indy</td></tr>
+                 </table>
+                 <img src="images/blank.png" height="80"/>
+             </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-1.10.1.min.js"></script>
+    <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="scripts/bootsrap.min.js"></script>
+    <script>
+        function gotolookup() {
+            window.location.assign("index.html");
+        }
+
+    </script>
+</body>
+</html>
