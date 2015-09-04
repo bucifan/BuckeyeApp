@@ -132,7 +132,9 @@ function getPlayerData(po){
 		dtlsHTML += "</div>";
 		$(".bio-table").remove();
 		$(".bio-wrap-col").remove();
-		dtlsHTML += "<hr/>" + $("#Content").html();
+		var $details = $("#Content").html();
+		var ovst = $details.indexOf("verview:");
+		dtlsHTML += "<hr/>" + $details.substring(ovst + 8);
 		$("#playerDetail").append(dtlsHTML);
 		$("#playerLU").blur();
     //localStorage['lastplayer'] =po.name;
@@ -140,7 +142,16 @@ function getPlayerData(po){
 	});
 }
 function gotoschedule() {
-    window.location.assign("schedules/2015Schedule.html");
+    $(".panel-body").slideUp()
+    $(".panel-schedule").slideDown();
+    $("#schdbut").hide();
+    $("#rostbut").show();
+}
+function gotolookup() {
+    $(".panel-schedule").slideUp();
+    $(".panel-body").slideDown();
+    $("#schdbut").show();
+    $("#rostbut").hide();
 }
 function gotoscheduleOld(){
   $("#playerDetail").remove();
