@@ -4,20 +4,20 @@
     <meta charset="utf-8" />
     <title>Go Bucks</title>
     <!-- OSHIIPMOBILE references -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
-    <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
-    <link href="css/osu2015.css" rel="stylesheet" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+    <link href="/css/osu2015.css" rel="stylesheet" />
     <style>
         .panel-primary{
-             background-image: url("images/buckeyestripe2.png");
+             background-image: url("/images/buckeyestripe2.png");
              background-repeat: repeat-y;
              background-position: center;
              height: 100%;
              text-align: center;
         }
         .panel-body{
-             background-image: url("images/osu2014nc200light.png");
+             background-image: url("/images/osu2014nc200light.png");
              background-repeat:no-repeat; 
              background-position: center;
              height: 100%;
@@ -30,7 +30,7 @@
         <div class="panel panel-primary" style='margin:10px 10px 10px 10px;'>
              <div class="panel-heading" style='text-align:center;background:#991119'>GO BUCKEYES!
                 <span class='hdricons'>
-                     <img src="images/person.png" alt="Schedule" onclick="gotolookup();"/>
+                     <img src="/images/person.png" alt="Schedule" onclick="gotolookup();"/>
                  </span>             
              </div>
              <div class="panel-body" style="text-align:center;padding:5px;height:100%">
@@ -50,7 +50,7 @@
                    <tr data-localid="12" data-serverid="8F81E13E-6D6F-4A32-83AA-B8E27BBB2A8C"><td>11/28/2015</td><td>TTUN</td><td>Away</td></tr>
                    <tr data-localid="13" data-serverid="0D5ECCC8-0B70-451A-B554-86A5EE2D8DE2"><td>12/5/2015</td><td>B10 Championship</td><td>Indy</td></tr>
                  </table>
-                 <img src="images/blank.png" height="80"/>
+                 <img src="/images/blank.png" height="80" onclick="window.location.assign('/index.html');" />
              </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
     <script src="scripts/bootsrap.min.js"></script>
     <script>
         function gotolookup() {
-            window.history(-1);
+            window.history.back();
         }
 
     </script>
