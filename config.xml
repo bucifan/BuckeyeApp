@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:gap="http://phonegap.com/ns/1.0" version="1.0.2.1" xmlns="http://www.w3.org/ns/widgets">
+<widget xmlns:gap="http://phonegap.com/ns/1.0" version="1.0.2.2" xmlns="http://www.w3.org/ns/widgets">
   <name>Bucifan - Go Bucks</name>
   <description>A mobile app to provide access to Ohio State schedule and roster</description>
   <author href="http://www.bucifan.com" email="roberoach@hotmail.com">Rob Roach - Bucifan.com</author>
   <content src="index.html" />
-  <access origin="http://www.bucifan.com/" subdomains="true" />
+  <access origin="*" subdomains="true" />
   <icon src="icon2.png" />
   <gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
   <feature name="http://api.phonegap.com/1.0/network"/> 
