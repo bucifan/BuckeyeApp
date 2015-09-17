@@ -155,7 +155,7 @@ function gotolookup() {
 }
 function gotoscheduleOld(){
 
-  $("#panel-schedule").append("<div id='apiscedule'><hr/> <b>2015 Schedule</b><br/></div>");
+  $(".panel-schedule").append("<div id='apiscedule'><hr/> <b>2015 Schedule</b><br/></div>");
   $("#apiscedule").append("<div id='scheduleList' >loading schedule...<br/><img src='images/loading.gif' alt='loading'/></div>");
   var schHTML = "";
   $.getJSON("http://bucifanSchedule.azure-mobile.net/api/footballseason?year=2015", function (data) {
